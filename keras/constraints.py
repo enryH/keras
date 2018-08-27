@@ -65,7 +65,13 @@ class NonNeg(Constraint):
     def __call__(self, w):
         w *= K.cast(K.greater_equal(w, 0.), K.floatx())
         return w
+class NonPos(Constraint):
+    """Constrains the weights to be non-positiv.
+    """
 
+    def __call__(self, w):
+        w *= K.cast(K.less_equal(w, 0.), K.floatx())
+        return w
 
 class UnitNorm(Constraint):
     """Constrains the weights incident to each hidden unit to have unit norm.
