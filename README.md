@@ -144,6 +144,8 @@ First, clone Keras using `git`:
 
 ```sh
 git clone https://github.com/keras-team/keras.git
+# this version with added NonPositivity Constraint
+https://github.com/enryH/keras.git
 ```
 
  Then, `cd` to the Keras folder and run the install command:
